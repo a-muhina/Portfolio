@@ -1,81 +1,101 @@
 
 /*General*/
-body{
-    margin: 0 275px;
-    
+
+body, html {
+    margin: 0 ;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+}
+
 /*Text*/
-h1{
+
+h1 {
     font-size: 64px;
 }
-h2{
+h2 {
     font-size: 48px;
 }
-h3{
+h3 {
     font-size: 40px;
 }
-p{
+p {
     font-size: 32px;
 }
 .title {
     text-align: center;
 }
+
 /* Header and navigation section*/
-header, nav {
-    box-sizing: border-box;
+
+header {
+    grid-column: 2 / span 10;
     display: flex;
-    width: 100%;
-    height: 93px;
-    background-color: white;
-    z-index: 1;
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: 0;
-}
-nav {
-    flex-direction: row;
-}
-#navigation {
-    display: inline-flex;
-    list-style: none;
-    flex-direction: row;
-    width: 100%;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    margin-right: 10px;
+    padding: 30px;
+    background-color: #fff;
 }
-#logo {
-    display: flex;
-    width: 339px;
-    height: 69px;
-    padding: 10px;
-    align-items: center;
-    margin: 0 55px;
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 30;
 }
-.nav {
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000;
+    font-size: 1em;
+}
+li {
     list-style-type: none;
-    padding: 0px;
-    margin: 0 55px;
 }
 
 /*Hero section*/
-h1.title, p.intro {
-    width:658px;
+
+main {
+    grid-column: 1 / span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
 }
-#herotext{
-    display:inline;
-}
-#hero{
-    display: inline-flex;
+
+.section {
+    grid-column: 2 / span 10;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
     align-items: center;
-    justify-content: space-around;
-    width: 100%;
 }
+
+#herotext{
+    grid-column: 1 / span 6;
+    
+}
+.portrait{
+    grid-column: 9 / span 6;
+}
+
 
 /*About Me Section*/
-#aboutme {
-    display: block;
 
+.title {
+    grid-column: 1 / span 12;
 }
 
+.section .content {
+    grid-column: 1 / span 12;
+}
+
+.icons {
+    grid-column: 6 / span 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
