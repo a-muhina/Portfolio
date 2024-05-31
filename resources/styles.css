@@ -6,10 +6,27 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
 }
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
+    gap: 30px;
+}
+
+.section {
+    grid-column: 2 / span 10;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.box {
+    grid-column: 1 / span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     gap: 30px;
 }
 
@@ -18,17 +35,27 @@ body, html {
 h1 {
     font-size: 64px;
 }
+
 h2 {
     font-size: 48px;
 }
+
 h3 {
     font-size: 40px;
 }
+
 p {
     font-size: 32px;
+    margin: 10px 0;
 }
+
 .title {
     text-align: center;
+    margin: 10px 0;
+}
+
+.text {
+    
 }
 
 /* Header and navigation section*/
@@ -41,17 +68,20 @@ header {
     padding: 30px;
     background-color: #fff;
 }
+
 header .logo {
     font-size: 1.5em;
     font-weight: bold;
     padding: 30;
 }
+
 nav a {
     margin: 0 10px;
     text-decoration: none;
     color: #000;
     font-size: 1em;
 }
+
 li {
     list-style-type: none;
 }
@@ -66,22 +96,21 @@ main {
     gap: 30px;
 }
 
-.section {
-    grid-column: 2 / span 10;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 30px;
-    align-items: center;
-}
-
 #herotext{
     grid-column: 1 / span 6;
-    
-}
-.portrait{
-    grid-column: 9 / span 6;
 }
 
+#herotext .title {
+    text-align: left;
+}
+
+.portrait{
+    grid-column: 7 / span 6;
+}
+
+#portrait {
+    width: 100%;
+}
 
 /*About Me Section*/
 
@@ -98,4 +127,26 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/*Skills*/
+
+#skills .box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Projects*/
+
+#projects.box {
+    justify-content: space-between;
+}
+
+.card {
+    grid-column: span 4;
+}
+
+.card img {
+    width: 100%;
 }
