@@ -56,14 +56,26 @@ h3 {
     font-size: 30px;
 }
 
+h4 {
+    font-size: 25px;
+}
+
 p {
     font-family: "Open Sans", sans-serif;
-    font-size: 22px;
+    font-size: 18px;
     margin: 0;
 }
 
-p .intro {
-    font-size: 32px;
+p.intro {
+    font-size: 22px;
+}
+
+span {
+    font-size: 16px;
+    margin-right:10px;
+    padding: 5px 10px;
+    border: 1px solid #ac3b61;
+    border-radius: 25px;
 }
 
 .title {
@@ -83,6 +95,14 @@ p .intro {
 /* Header and navigation section*/
 
 header {
+    grid-column: 1 / span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    border-bottom: 2px solid #dfd5d8;
+}
+
+.header {
     grid-column: 2 / span 10;
     display: flex;
     justify-content: space-between;
@@ -134,12 +154,22 @@ main {
 }
 
 button, #submit {
-    font-size: 25px;
+    font-size: 22px;
     height: 60px;
     border-radius: 30px;
     padding: 10px 20px;
     margin-right: 20px;
     margin-top: 10px;
+}
+
+.main {
+    background-color: #ffa2b6;
+    border: 0px;
+}
+
+.secondary {
+    background-color: rgb(0,0,0,0);
+    border: 2px solid #9e9598;
 }
 
 /*About Me Section*/
@@ -179,11 +209,11 @@ button, #submit {
 
 .container {
     grid-column: 1 / span 8;
-    margin: 10px 0;
-    border: 3px solid #9e9598;
+    margin: 0;
     border-radius: 20px;
-    padding: 20px 20px 40px 20px;
-    background-color: #bab2b5;
+    padding: 30px 20px 20px 20px;
+    /*background-color: #fbfbfa;
+    box-shadow: 0 4px 8px 0 rgba(99, 64, 76, 0.2), 0 6px 20px 0 rgba(99, 64, 76, 0.19);*/
 }
 
 .container h3 {
@@ -191,11 +221,11 @@ button, #submit {
     margin-top: 0;
     text-align: center;
 }
+
 .container div {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
 }
 
 .container div img {
@@ -215,29 +245,38 @@ button, #submit {
 
 .card {
     grid-column: span 4;
-    background-color: #9e9598;
-    padding: 20px;
+    background-color: #fbfbfa;
+    padding: 0 0 20px 0;
     border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(99, 64, 76, 0.2), 0 6px 20px 0 rgba(99, 64, 76, 0.19);
 }
 
 .card img {
     max-width: 100%;
     height: auto;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 20px 20px  0 0;
+}
+
+.tags {
+    display: flex;
+    justify-items: space-between;
+    align-items: center;
+}
+
+.text {
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.text h4 {
+    margin-top: 10px;
 }
 
 #view {
     grid-column: 6 / span 2;
     align-items: center;
     text-align: center;
-}
-
-.text {
-    background-color: #ebe9e1;
-    padding: 20px;
-    border-radius: 25px;
-    margin-top: 20px;
 }
 
 /*Contact*/
